@@ -1,0 +1,11 @@
+<p>user works!</p>
+<table> 
+   <tr> 
+       <th> Name </th>
+    </tr>
+    <tr>
+           <app-user-item *ngFor="let user of users" [user]="user"> </app-user-item>
+    </tr>
+</table>
+
+<!-- we make a table and in each row we use a for method to show the items that we have put in user-item.html -->
