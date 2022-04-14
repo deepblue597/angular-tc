@@ -15,6 +15,8 @@ export class UserItemComponent implements OnInit {
   
   
   ngOnInit(): void {
+    console.log(this.user?.telephone[0].cellphone ) ; 
   }
-
+  
+  
 }
