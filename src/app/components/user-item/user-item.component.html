@@ -1,6 +1,16 @@
 <div class="user">
     <td> {{ user?.name }}</td>
     <td> {{ user?.email }} </td>
+    <p *ngFor="let address of user?.address " > {{ address}}  </p>
+    <p> {{ user?.username }} </p>
+    <!-- <p> {{user!.telephone[0].cellphone }} </p> -->
+    <p *ngFor="let phone of user!.telephone">{{ phone.cellphone}}</p>
+    <p *ngFor="let phone of user!.telephone">{{ phone.stable}}</p>
+    <div *ngFor="let phone of user!.telephone">
+        <label> {{ phone.cellphone}}</label>
+        <input *ngIf="phone.ide==0" type="text">
+        <input *ngIf="phone.ide==1"type="radio" >
+    </div>
 </div>
 
 <!-- we take from each user the items we want (e.g name and email)-->
