@@ -1,4 +1,16 @@
-<p>telecommand-item works!</p>
+
 <div>
-    <p>{{ telecommand?.name }} </p> 
+    
+   
+    <mat-form-field appearance="fill">
+        <mat-label>{{ telecommand?.name }} </mat-label> 
+       
+        <!-- <p> {{ telecommand?.type?.engType}} </p> -->
+        <input matInput *ngIf="telecommand?.type?.engType=='integer'" type="text">
+        <mat-select *ngIf="telecommand?.type?.engType=='enumeration'" >
+            <mat-option *ngFor="let option of options" value="option" > {{option }} </mat-option>
+        </mat-select> 
+        
+    </mat-form-field>
+    <!-- <p *ngFor="let tele of telecommand?.type?.engType"> {{tele}}  </p> -->
 </div>

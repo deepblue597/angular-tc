@@ -9,6 +9,12 @@ import { UserItemComponent } from './components/user-item/user-item.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TelecommandItemComponent } from './components/telecommand-item/telecommand-item.component';
 import { TelecommandsComponent } from './components/telecommands/telecommands.component';
+import {MatBadgeModule} from '@angular/material/badge';
+import {MatIconModule} from '@angular/material/icon';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -23,7 +29,13 @@ import { TelecommandsComponent } from './components/telecommands/telecommands.co
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule, 
+    MatBadgeModule, 
+    MatIconModule, 
+    MatFormFieldModule, 
+    MatInputModule, 
+    MatSelectModule, 
+    MatButtonModule
     
   ],
   providers: [],

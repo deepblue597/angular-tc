@@ -10,11 +10,12 @@ import { TelecommandService } from 'src/app/services/telecommand.service';
 })
 export class TelecommandItemComponent implements OnInit {
 
+  options: String[] = ['Temperature 1' , 'Status temperature' , 'temperature 2' ] ; 
   @Input() telecommand: ArgumentInfo | undefined;
   constructor() {} 
 
   ngOnInit(): void {
-    console.log(this.telecommand?.name) ; 
+    // console.log(this.telecommand?.name) ; 
 
   }
   // telecommands : ArgumentAssignmentInfo[] = [] ; 

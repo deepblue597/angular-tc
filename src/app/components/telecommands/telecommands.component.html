@@ -1,4 +1,22 @@
-<p>telecommands works!</p>
-<div>
+<!-- <p>telecommands works!</p> -->
+<!-- <div>
     <app-telecommand-item *ngFor="let telecommand of telecommands" [telecommand]="telecommand" ></app-telecommand-item>
+</div> -->
+
+<h1>Arguments </h1> 
+<div>
+    <app-telecommand-item *ngFor="let telecommand of telecommands[2]" [telecommand]="telecommand"></app-telecommand-item>
 </div>
+<div>
+    <mat-form-field class="second" appearance="fill">
+        <mat-label>Comments</mat-label>
+      <textarea matInput placeholder="Type any additional comments"></textarea>
+    </mat-form-field>
+    
+</div>
+
+<button mat-button>
+      
+    <mat-icon>send </mat-icon> Send
+</button>
+
