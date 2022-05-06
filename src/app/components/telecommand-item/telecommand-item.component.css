@@ -7,3 +7,7 @@
 *{ 
     margin: 0.3rem ; 
 }
+
+.mat-icon {
+    font-size: 20px;
+  }

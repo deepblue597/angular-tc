@@ -17,6 +17,8 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatButtonModule} from '@angular/material/button';
 import {MatTableModule} from '@angular/material/table';
 import {MatStepperModule} from '@angular/material/stepper';
+import {MatRadioModule} from '@angular/material/radio';
+
 
 @NgModule({
   declarations: [
@@ -39,7 +41,8 @@ import {MatStepperModule} from '@angular/material/stepper';
     MatSelectModule, 
     MatButtonModule, 
     MatTableModule, 
-    MatStepperModule
+    MatStepperModule, 
+    MatRadioModule
     
   ],
   providers: [],

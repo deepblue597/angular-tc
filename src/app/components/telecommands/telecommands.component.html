@@ -5,7 +5,7 @@
 
 
 
-<h1>Arguments </h1>  
+
 
   <!-- <table mat-table [dataSource]="commands">  says that the array is 0 
 
@@ -30,13 +30,14 @@
 
     <!-- <p *ngFor="let titles of titles"> {{ titles }} </p> 
     <p *ngFor="let dataSourse of data"> {{ data }} </p>  -->
-<mat-stepper>
-    <mat-step>
+<mat-stepper  linear #stepper>
+    <mat-step >
+        <ng-template matStepLabel>Select a Telecommand</ng-template>
         <table mat-table [dataSource]="commands"> <!-- says that the array is 0 -->
 
             <ng-containter matColumnDef="telecommands"> 
                 <th mat-header-cell *matHeaderCellDef> Telecommands. </th>
-                <td mat-cell *matCellDef="let command"> {{command.name}} </td>
+                <td mat-cell *matCellDef="let command" (click)="onClick(command.name)"> {{command.name}} </td>
             </ng-containter>
         
             <tr mat-header-row *matHeaderRowDef="displayedCol"></tr>
@@ -44,22 +45,28 @@
         
         </table>  
         <div>
-            <button mat-button matStepperNext>Next</button>
+            
+            <button mat-button matStepperNext>Next <mat-icon>redo</mat-icon> </button>
           </div>
     </mat-step>
     <mat-step>
+        <ng-template matStepLabel>Define the arguments</ng-template>
+        <p>  {{ commands[number()].name }} </p>
+        <h1>Arguments </h1>  
         <app-telecommand-item *ngFor="let telecommand of telecommands[number()]" [telecommand]="telecommand"></app-telecommand-item>
-        <mat-form-field class="second" appearance="fill">
+        <mat-icon> chat</mat-icon><mat-form-field class="second" appearance="fill">
             <mat-label>Comments</mat-label>
           <textarea matInput placeholder="Type any additional comments"></textarea>
         </mat-form-field>
         <div>
-            <button mat-button matStepperNext>Next</button>
+            <button mat-button matStepperPrevious><mat-icon>undo</mat-icon> Back</button>
+            <button mat-button matStepperNext>Next <mat-icon>redo</mat-icon></button>
           </div>
     </mat-step>
     <mat-step>
+        <ng-template matStepLabel>send the Telecommand</ng-template>
         <p> {{ commands[number()].name }}</p>
-        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperPrevious><mat-icon>undo</mat-icon> Back</button>
         <button mat-button>
       
             <mat-icon>send </mat-icon> Send
